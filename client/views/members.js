@@ -1,8 +1,8 @@
-Template.private.Members = function() {
+Template.members.Members = function() {
 	return Members;
 }
 
-Template.private.helpers({
+Template.members.helpers({
 	tableSettings: function() {
 		return {
 			collection: Members,
@@ -29,5 +29,11 @@ Template.private.helpers({
 			showColumnToggles: true,
 			class: 'table table-striped table-hover col-sm-12',
 		};
+	}
+});
+
+Template.members.events({
+	'click tr': function(){
+		console.log(this);
 	}
 });
